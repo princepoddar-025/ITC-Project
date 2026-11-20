@@ -1,410 +1,355 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Learn full-stack web development with TechSkill Academy. Explore HTML5, CSS3, JavaScript, hands-on projects, and a structured 12-week curriculum.">
-    <meta name="theme-color" content="#0f172a">
-    <meta name="robots" content="index, follow">
-    <title>Full-Stack Web Development Course | TechSkill Academy</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>TechSkill Academy — Live Full-Stack &amp; AI Bootcamp</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
 </head>
 <body>
+  <div class="cursor-glow" aria-hidden="true"></div>
 
-    <!-- ==========================================
-         1. NAVIGATION HEADER
-    =========================================== -->
-    <header class="navbar">
-        <div class="container nav-container">
-            <a href="#overview" class="brand-logo">
-                <span class="logo-icon">&lt;/&gt;</span> TechSkill<span class="logo-highlight">Academy</span>
-            </a>
-            
-            <nav class="nav-menu" id="navMenu" aria-label="Main navigation">
-                <a href="#overview" class="nav-link">Overview</a>
-                <a href="#curriculum" class="nav-link">Curriculum</a>
-                <a href="#instructor" class="nav-link">Instructor</a>
-                <a href="#enroll" class="nav-link">Enrollment</a>
-            </nav>
+  <header class="site-header" id="top">
+    <nav class="navbar container" aria-label="Main navigation">
+      <a href="#top" class="logo">TechSkill<span>Academy</span></a>
+      <button class="nav-toggle" id="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-menu">
+        <li><a href="#features">Why Live</a></li>
+        <li><a href="#curriculum">Curriculum</a></li>
+        <li><a href="#instructors">Mentors</a></li>
+        <li><a href="#testimonials">Reviews</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#enroll" class="btn btn-sm">Enroll Now</a></li>
+      </ul>
+    </nav>
+  </header>
 
-            <a href="#enroll" class="btn btn-primary nav-cta">Enroll Now</a>
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="hero">
+      <div class="hero-bg" aria-hidden="true">
+        <div class="grid-floor"></div>
+        <div class="glow-orb orb-1"></div>
+        <div class="glow-orb orb-2"></div>
+        <div class="cube-3d cube-a">
+          <div class="face front"></div><div class="face back"></div>
+          <div class="face right"></div><div class="face left"></div>
+          <div class="face top"></div><div class="face bottom"></div>
         </div>
-    </header>
-<!--here is the first edit-->
-    <main>
-        <!-- ==========================================
-             2. HERO BANNER
-        =========================================== -->
-        <section id="overview" class="hero-section">
-            <div class="container hero-container">
-                <div class="hero-content">
-                    <div class="badge-group">
-                        <span class="badge badge-accent">🚀 Beginner Friendly</span>
-                        <span class="badge badge-light">⭐ 4.9 Rating (1,200+ Graduates)</span>
-                    </div>
-                    
-                    <h1 class="hero-title">Full-Stack Web Development <span class="text-gradient">Mastery</span></h1>
-                    
-                    <p class="hero-subtitle">
-                        <b>Build modern, responsive, and interactive web applications from scratch. Master semantic HTML5, responsive CSS3, and Vanilla JavaScript (ES6+) through hands-on project building.</b>
-                    </p>
-
-                    <div class="hero-cta-group">
-                        <a href="#enroll" class="btn btn-primary btn-lg">Enroll Now &rarr;</a>
-                        <a href="#curriculum" class="btn btn-secondary btn-lg">Explore Syllabus</a>
-                    </div>
-
-                    <div class="hero-features">
-                        <div class="feature-item">
-                            <span class="feature-icon">⏱️</span>
-                            <span>12 Weeks Live</span>
-                        </div>
-                        <div class="feature-item">
-                            <span class="feature-icon">💻</span>
-                            <span>15+ Capstone Projects</span>
-                        </div>
-                        <div class="feature-item">
-                            <span class="feature-icon">📜</span>
-                            <span>Verified Certificate</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="hero-visual">
-                    <div class="code-card">
-                        <div class="code-header">
-                            <span class="dot red"></span>
-                            <span class="dot yellow"></span>
-                            <span class="dot green"></span>
-                            <span class="code-title">app.js — TechSkill Academy</span>
-                        </div>
-                        <pre class="code-body"><code><span class="token-keyword">const</span> student = {
-  name: <span class="token-string">"B.Tech Computer Science"</span>,
-  group: <span class="token-number">19</span>,
-  project: <span class="token-string">"#47 Online Course Landing Page"</span>,
-  status: <span class="token-string">"Ready to Master Web Dev!"</span>
-};
-
-<span class="token-function">function</span> <span class="token-title">startLearning</span>() {
-  <span class="token-keyword">return</span> <span class="token-string">"Building the Future with Code 🚀"</span>;
-}
-<span class="token-function">console</span>.<span class="token-function">log</span>(startLearning());</code></pre>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ==========================================
-             3. COURSE CURRICULUM SECTION (ACCORDION)
-        =========================================== -->
-        <section id="curriculum" class="section curriculum-section">
-            <div class="container">
-                <div class="section-header">
-                    <span class="section-tagline">Syllabus Breakdown</span>
-                    <h2 class="section-title">Structured 4-Module Curriculum</h2>
-                    <p class="section-subtitle">Click on any module to explore sub-topics, hands-on assignments, and learning outcomes.</p>
-                </div>
-
-                <div class="accordion" id="curriculumAccordion">
-                    
-                    <!-- Module 1 -->
-                    <div class="accordion-item">
-                        <button class="accordion-header" aria-expanded="false">
-                            <span class="module-title">
-                                <span class="module-number">Module 1</span>
-                                Web Fundamentals & Semantic HTML5
-                            </span>
-                            <span class="accordion-icon">+</span>
-                        </button>
-                        <div class="accordion-content">
-                            <div class="accordion-body">
-                                <ul>
-                                    <li><strong>Core Concepts:</strong> How the Web works, HTTP/HTTPS basics, Client-Server architecture.</li>
-                                    <li><strong>Document Structure:</strong> Headings, Paragraphs, Lists, Anchors, and Media elements.</li>
-                                    <li><strong>Semantic Markup:</strong> &lt;header&gt;, &lt;nav&gt;, &lt;main&gt;, &lt;section&gt;, &lt;article&gt;, &lt;footer&gt;.</li>
-                                    <li><strong>Web Forms & Input Types:</strong> Labels, Text inputs, Radios, Checkboxes, and Validation attributes.</li>
-                                    <li><strong>Project #1:</strong> Build a Semantic Single-Page Documentation Site.</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Module 2 -->
-                    <div class="accordion-item">
-                        <button class="accordion-header" aria-expanded="false">
-                            <span class="module-title">
-                                <span class="module-number">Module 2</span>
-                                Modern CSS3 Layouts, Flexbox & CSS Grid
-                            </span>
-                            <span class="accordion-icon">+</span>
-                        </button>
-                        <div class="accordion-content">
-                            <div class="accordion-body">
-                                <ul>
-                                    <li><strong>CSS Fundamentals:</strong> Selectors, Specificity, Box Model (Margin, Border, Padding).</li>
-                                    <li><strong>Modern Layouts:</strong> Master CSS Flexbox properties and CSS Grid area templates.</li>
-                                    <li><strong>Responsive Web Design:</strong> Media queries, fluid typography, mobile-first design strategy.</li>
-                                    <li><strong>Styling & Animations:</strong> Transitions, transforms, keyframe animations, and custom UI variables.</li>
-                                    <li><strong>Project #2:</strong> Create a Fully Responsive E-Commerce Product Gallery.</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Module 3 -->
-                    <div class="accordion-item">
-                        <button class="accordion-header" aria-expanded="false">
-                            <span class="module-title">
-                                <span class="module-number">Module 3</span>
-                                Vanilla JavaScript Essentials & Programming Logic
-                            </span>
-                            <span class="accordion-icon">+</span>
-                        </button>
-                        <div class="accordion-content">
-                            <div class="accordion-body">
-                                <ul>
-                                    <li><strong>JS Foundations:</strong> Variables (let, const), Primitive types, Type conversion.</li>
-                                    <li><strong>Control Flow:</strong> Conditional statements (if-else, switch) and Loops (for, while, forEach).</li>
-                                    <li><strong>Functions & ES6+:</strong> Arrow functions, scope, closures, destructuring, and template literals.</li>
-                                    <li><strong>Data Structures:</strong> Working with Arrays, Array methods (map, filter, reduce), and Objects.</li>
-                                    <li><strong>Project #3:</strong> Build an Interactive Task Manager & Grade Calculator.</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Module 4 -->
-                    <div class="accordion-item">
-                        <button class="accordion-header" aria-expanded="false">
-                            <span class="module-title">
-                                <span class="module-number">Module 4</span>
-                                DOM Manipulation & Client-Side Form Validation
-                            </span>
-                            <span class="accordion-icon">+</span>
-                        </button>
-                        <div class="accordion-content">
-                            <div class="accordion-body">
-                                <ul>
-                                    <li><strong>DOM API:</strong> Selecting elements, modifying text, updating styles, and toggling CSS classes.</li>
-                                    <li><strong>Event Handling:</strong> Click events, keyup listeners, submit events, and event delegation.</li>
-                                    <li><strong>Form Processing:</strong> Regex email validation, phone input formatting, and error state handling.</li>
-                                    <li><strong>Asynchronous Basics:</strong> Introduction to Web APIs, setTimeout, and dynamic DOM updates.</li>
-                                    <li><strong>Project #4:</strong> Complete Landing Page with Accordion & Interactive Form Validation.</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- ==========================================
-             4. INSTRUCTOR BIO SECTION
-        =========================================== -->
-        <section id="instructor" class="section instructor-section">
-            <div class="container">
-                <div class="section-header">
-                    <span class="section-tagline">Expert Instruction</span>
-                    <h2 class="section-title">Meet Your Course Instructor</h2>
-                </div>
-
-                <div class="instructor-card">
-                    <div class="instructor-avatar-container">
-                        <div class="instructor-avatar">
-                            <span class="avatar-text">AM</span>
-                        </div>
-                        <span class="status-indicator">Online</span>
-                    </div>
-
-                    <div class="instructor-details">
-                        <h3 class="instructor-name">Dr. Alex Mercer</h3>
-                        <p class="instructor-role">Senior Full-Stack Developer & Lead Academic Mentor</p>
-                        
-                        <div class="instructor-tags">
-                            <span class="tag">12+ Yrs Experience</span>
-                            <span class="tag">Ex-Lead Engineer</span>
-                            <span class="tag">50k+ Online Learners</span>
-                        </div>
-
-                        <p class="instructor-bio">
-                            Dr. Alex Mercer specializes in modern web architectures and front-end engineering. With over a decade of industry and teaching experience, he breaks down complex programming concepts into intuitive, hands-on lessons tailored for beginner B.Tech students.
-                        </p>
-
-                        <div class="instructor-stats">
-                            <div class="stat-box">
-                                <span class="stat-number">4.9/5.0</span>
-                                <span class="stat-label">Instructor Rating</span>
-                            </div>
-                            <div class="stat-box">
-                                <span class="stat-number">15+</span>
-                                <span class="stat-label">Web Courses</span>
-                            </div>
-                            <div class="stat-box">
-                                <span class="stat-number">100%</span>
-                                <span class="stat-label">Hands-On Code</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ==========================================
-             5. ENROLLMENT FORM SECTION
-        =========================================== -->
-        <section id="enroll" class="section enrollment-section">
-            <div class="container">
-                <div class="enrollment-wrapper">
-                    <div class="enrollment-info">
-                        <span class="section-tagline tagline-light">Reserve Your Spot</span>
-                        <h2 class="enrollment-heading">Start Your Web Development Journey Today</h2>
-                        <p class="enrollment-desc">
-                            Fill out the enrollment form to secure instant access to upcoming live cohorts, course materials, and mentor support.
-                        </p>
-
-                        <ul class="enrollment-benefits">
-                            <li>✓ Instant access to all live sessions and recordings</li>
-                            <li>✓ Direct discord community access with mentors</li>
-                            <li>✓ Verified certificate of completion upon project submission</li>
-                        </ul>
-                    </div>
-
-                    <div class="enrollment-card">
-                        <h3 class="form-title">Student Registration Form</h3>
-                        
-                        <form id="enrollmentForm" class="enrollment-form" novalidate>
-                            
-                            <!-- Full Name Field -->
-                            <div class="form-group">
-                                <label for="fullName">Full Name <span class="required">*</span></label>
-                                <input type="text" id="fullName" name="fullName" class="form-control" placeholder="e.g., Prince Poddar">
-                                <span class="error-message" id="fullNameError"></span>
-                            </div>
-
-                            <!-- Email Field -->
-                            <div class="form-group">
-                                <label for="email">Email Address <span class="required">*</span></label>
-                                <input type="email" id="email" name="email" class="form-control" placeholder="e.g., student@example.com">
-                                <span class="error-message" id="emailError"></span>
-                            </div>
-
-                            <!-- Phone Field -->
-                            <div class="form-group">
-                                <label for="phone">Phone Number (10 Digits) <span class="required">*</span></label>
-                                <input type="tel" id="phone" name="phone" class="form-control" placeholder="e.g., 9876543210" maxlength="10">
-                                <span class="error-message" id="phoneError"></span>
-                            </div>
-
-                            <!-- Skill Level Select -->
-                            <div class="form-group">
-                                <label for="skillLevel">Current Coding Skill Level <span class="required">*</span></label>
-                                <select id="skillLevel" name="skillLevel" class="form-control">
-                                    <option value="">-- Select Your Skill Level --</option>
-                                    <option value="beginner">Absolute Beginner (No prior coding)</option>
-                                    <option value="intermediate">Intermediate (Know basic HTML/CSS)</option>
-                                    <option value="advanced">Advanced (Familiar with JS/Programming)</option>
-                                </select>
-                                <span class="error-message" id="skillLevelError"></span>
-                            </div>
-
-                            <!-- Preferred Batch Plan -->
-                            <div class="form-group">
-                                <label for="batchPlan">Preferred Batch Schedule <span class="required">*</span></label>
-                                <select id="batchPlan" name="batchPlan" class="form-control">
-                                    <option value="">-- Select Preferred Batch --</option>
-                                    <option value="weekend">Weekend Batch (Sat & Sun Live)</option>
-                                    <option value="weekday">Weekday Evening Batch (Mon-Fri)</option>
-                                    <option value="selfpaced">Self-Paced Learning + Weekly Q&A</option>
-                                </select>
-                                <span class="error-message" id="batchPlanError"></span>
-                            </div>
-
-                            <!-- Submit Button -->
-                            <button type="submit" class="btn btn-primary btn-block" id="submitBtn">
-                                Complete Enrollment &rarr;
-                            </button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Success Confirmation Modal -->
-    <div class="modal-overlay" id="successModal" aria-hidden="true">
-        <div class="modal-card">
-            <div class="modal-icon">🎉</div>
-            <h3 class="modal-title">Enrollment Successful!</h3>
-            <p class="modal-text" id="modalText">
-                Thank you for registering. Your enrollment details have been validated and saved. Welcome to TechSkill Academy!
-            </p>
-            <button class="btn btn-primary" id="closeModalBtn">Close & Continue</button>
+        <div class="cube-3d cube-b">
+          <div class="face front"></div><div class="face back"></div>
+          <div class="face right"></div><div class="face left"></div>
+          <div class="face top"></div><div class="face bottom"></div>
         </div>
+      </div>
+
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="live-pill">
+            <span class="live-dot" aria-hidden="true"></span>
+            <strong>LIVE</strong> &bull; 1,200+ students attending now
+          </div>
+          <h1>Master Full-Stack &amp; AI in <span class="text-gradient">Live Interactive Cohorts</span></h1>
+          <p>Build real production apps alongside senior engineers. Code live, ask questions in real time, and graduate with a verified portfolio.</p>
+          <div class="hero-actions">
+            <a href="#enroll" class="btn btn-primary">Reserve Your Seat</a>
+            <a href="#curriculum" class="btn btn-outline">View Syllabus</a>
+          </div>
+          <div class="hero-stats">
+            <div><strong>94%</strong><span>Hired in 6 mos</span></div>
+            <div><strong>4.9/5</strong><span>Student rating</span></div>
+            <div><strong>100%</strong><span>Live mentorship</span></div>
+          </div>
+        </div>
+
+        <!-- LIVE CLASS MOCKUP -->
+        <div class="live-stage card-3d" aria-label="Live online class preview">
+          <div class="stage-bar">
+            <span class="live-badge"><span class="live-dot"></span> LIVE SESSION</span>
+            <span class="stage-title">Cohort #14 &mdash; Building Real-Time APIs</span>
+            <span class="viewer-count">1,248 watching</span>
+          </div>
+          <div class="stage-body">
+            <div class="video-grid">
+              <div class="video-tile main-speaker">
+                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=640&q=80" width="640" height="360" alt="Lead instructor explaining full-stack architecture live on camera">
+                <span class="cam-tag">Sarah Chen (Lead Instructor)</span>
+              </div>
+              <div class="video-tile">
+                <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=400&q=80" width="400" height="240" alt="Students collaborating on laptops during live coding lab">
+                <span class="cam-tag">Breakout Room A</span>
+              </div>
+              <div class="video-tile">
+                <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=400&q=80" width="400" height="240" alt="Student sharing code screen during Q&A">
+                <span class="cam-tag">Arjun P. (Sharing Screen)</span>
+              </div>
+            </div>
+            <aside class="chat-panel" aria-label="Live class chat">
+              <div class="chat-head">Live Class Chat</div>
+              <ul class="chat-feed">
+                <li><strong>Maya:</strong> That WebSocket diagram just clicked!</li>
+                <li><strong>Liam:</strong> Pushed my repo &mdash; tests passing</li>
+                <li><strong>Sarah (Host):</strong> Awesome! Reviewing PRs next.</li>
+              </ul>
+              <div class="chat-pill">Ask a live question...</div>
+            </aside>
+          </div>
+          <div class="floating-badge badge-top">Next Q&amp;A in 04:12</div>
+          <div class="floating-badge badge-bottom">Code Review Active</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="section" id="features">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Why TechSkill Academy</span>
+          <h2>Not Another Pre-Recorded Video Library</h2>
+          <p>Every session happens live with instant feedback, pair programming, and accountability.</p>
+        </div>
+        <div class="card-grid">
+          <article class="card card-3d">
+            <div class="card-icon" aria-hidden="true">&#9889;</div>
+            <h3>Live Daily Coding</h3>
+            <p>Write code alongside instructors in real time and get unstuck in seconds instead of hours.</p>
+          </article>
+          <article class="card card-3d">
+            <div class="card-icon" aria-hidden="true">&#128187;</div>
+            <h3>Production Projects</h3>
+            <p>Ship 5 full-stack applications with CI/CD, authentication, and cloud deployment.</p>
+          </article>
+          <article class="card card-3d">
+            <div class="card-icon" aria-hidden="true">&#129309;</div>
+            <h3>1-on-1 Career Coaching</h3>
+            <p>Mock technical interviews, GitHub audits, and direct referrals to hiring partners.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CURRICULUM -->
+    <section class="section section-alt" id="curriculum">
+      <div class="container split-layout">
+        <div class="split-media card-3d">
+          <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=800&q=80" width="800" height="540" loading="lazy" alt="Laptop displaying modern web development code editor">
+          <div class="floating-badge badge-bottom">16 Weeks &bull; 120+ Live Hours</div>
+        </div>
+        <div>
+          <span class="eyebrow">Hands-On Syllabus</span>
+          <h2>Industry-Ready Curriculum</h2>
+          <p>Structured into four practical modules designed around what engineering teams actually use.</p>
+          <div class="module-list">
+            <div class="module-item"><span>01</span><div><h3>Modern Web Foundations</h3><p>Semantic HTML5, responsive CSS architecture, and modern JavaScript (ES2026).</p></div></div>
+            <div class="module-item"><span>02</span><div><h3>Frontend Systems &amp; UI</h3><p>Component design, state management, accessibility, and web performance.</p></div></div>
+            <div class="module-item"><span>03</span><div><h3>APIs, Databases &amp; Cloud</h3><p>Node.js, PostgreSQL, REST/GraphQL APIs, Docker, and automated testing.</p></div></div>
+            <div class="module-item"><span>04</span><div><h3>Applied AI &amp; Capstone</h3><p>LLM integration, RAG pipelines, and launching your flagship capstone product.</p></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INSTRUCTORS -->
+    <section class="section" id="instructors">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Learn From Practitioners</span>
+          <h2>Meet Your Live Instructors</h2>
+        </div>
+        <div class="card-grid">
+          <article class="card card-3d profile-card">
+            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=500&q=80" width="500" height="340" loading="lazy" alt="Portrait of Sarah Chen, Principal Frontend Architect">
+            <div class="card-body">
+              <h3>Sarah Chen</h3>
+              <p class="role">Ex-Staff Engineer &bull; Frontend &amp; UI Systems</p>
+              <p>10+ years scaling web apps used by millions. Leads live UI architecture workshops.</p>
+            </div>
+          </article>
+          <article class="card card-3d profile-card">
+            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=500&q=80" width="500" height="340" loading="lazy" alt="Portrait of Marcus Vance, Distributed Systems Lead">
+            <div class="card-body">
+              <h3>Marcus Vance</h3>
+              <p class="role">Cloud Architect &bull; Backend &amp; DevOps</p>
+              <p>Specializes in high-throughput APIs, database tuning, and zero-downtime deployments.</p>
+            </div>
+          </article>
+          <article class="card card-3d profile-card">
+            <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=500&q=80" width="500" height="340" loading="lazy" alt="Portrait of Priya Nair, AI Product Engineer">
+            <div class="card-body">
+              <h3>Priya Nair</h3>
+              <p class="role">AI Systems Lead &bull; Applied ML</p>
+              <p>Helps students integrate reliable AI agents and evaluation pipelines into real apps.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="section section-alt" id="testimonials">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Student Outcomes</span>
+          <h2>Trusted by 4,500+ Graduates</h2>
+        </div>
+        <div class="card-grid">
+          <blockquote class="card card-3d quote-card">
+            <p>"Being able to share my screen during live labs saved me weeks of frustration. Landed a junior full-stack role two weeks after graduation."</p>
+            <footer>
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80" width="48" height="48" loading="lazy" alt="Elena Rostova avatar">
+              <div><strong>Elena Rostova</strong><span>Frontend Developer</span></div>
+            </footer>
+          </blockquote>
+          <blockquote class="card card-3d quote-card">
+            <p>"The live cohort energy kept me accountable after my day job. My capstone project was the main talking point in every interview."</p>
+            <footer>
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&q=80" width="48" height="48" loading="lazy" alt="David Kim avatar">
+              <div><strong>David Kim</strong><span>Software Engineer</span></div>
+            </footer>
+          </blockquote>
+          <blockquote class="card card-3d quote-card">
+            <p>"Crystal-clear teaching and honest code reviews. I went from basic HTML to deploying full-stack AI apps with confidence."</p>
+            <footer>
+              <img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&w=120&q=80" width="48" height="48" loading="lazy" alt="Amara Okafor avatar">
+              <div><strong>Amara Okafor</strong><span>Full-Stack Engineer</span></div>
+            </footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ ACCORDION -->
+    <section class="section" id="faq">
+      <div class="container narrow">
+        <div class="section-head">
+          <span class="eyebrow">Got Questions?</span>
+          <h2>Frequently Asked Questions</h2>
+        </div>
+        <div class="accordion" id="faq-accordion">
+          <div class="accordion-item">
+            <button class="accordion-header" type="button" aria-expanded="false">
+              <span>Do I need prior coding experience to join?</span>
+              <span class="accordion-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="accordion-body">
+              <p>No prior experience is required. We start with a 1-week live prep bootcamp covering programming fundamentals before diving into full-stack projects.</p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-header" type="button" aria-expanded="false">
+              <span>What happens if I miss a live class?</span>
+              <span class="accordion-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="accordion-body">
+              <p>Every session is recorded in HD with searchable transcripts and timestamped code snapshots, plus weekend catch-up office hours with mentors.</p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-header" type="button" aria-expanded="false">
+              <span>How many hours per week should I commit?</span>
+              <span class="accordion-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="accordion-body">
+              <p>Plan for 12&ndash;15 hours per week: 6 hours of live evening/weekend classes and 6&ndash;9 hours of guided hands-on project building.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ENROLLMENT FORM -->
+    <section class="section section-alt" id="enroll">
+      <div class="container enroll-grid">
+        <div class="enroll-info">
+          <span class="eyebrow">Limited to 40 Seats Per Cohort</span>
+          <h2>Join the Next Live Cohort</h2>
+          <p>Apply in 60 seconds. An admissions advisor will schedule a free 15-minute syllabus walkthrough and skill check.</p>
+          <div class="enroll-visual">
+            <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=700&q=80" width="700" height="420" loading="lazy" alt="Students participating in a live interactive tech workshop">
+            <div class="live-pill"><span class="live-dot"></span> Cohort #15 starts Monday &bull; 6 seats left</div>
+          </div>
+        </div>
+
+        <form class="enroll-form" id="enroll-form" novalidate>
+          <h3>Reserve Your Spot</h3>
+
+          <div class="form-group">
+            <div class="field-wrap">
+              <span class="field-icon" aria-hidden="true">&#128100;</span>
+              <input type="text" id="fullName" name="fullName" placeholder=" " autocomplete="name" required>
+              <label for="fullName">Full Name</label>
+              <span class="status-icon" aria-hidden="true"></span>
+            </div>
+            <small class="error-msg" id="fullName-error" aria-live="polite"></small>
+          </div>
+
+          <div class="form-group">
+            <div class="field-wrap">
+              <span class="field-icon" aria-hidden="true">&#9993;</span>
+              <input type="email" id="email" name="email" placeholder=" " autocomplete="email" required>
+              <label for="email">Email Address</label>
+              <span class="status-icon" aria-hidden="true"></span>
+            </div>
+            <small class="error-msg" id="email-error" aria-live="polite"></small>
+          </div>
+
+          <div class="form-group">
+            <div class="field-wrap">
+              <span class="field-icon" aria-hidden="true">&#128222;</span>
+              <input type="tel" id="phone" name="phone" placeholder=" " inputmode="numeric" maxlength="10" autocomplete="tel-national" required>
+              <label for="phone">Phone Number (10 digits)</label>
+              <span class="status-icon" aria-hidden="true"></span>
+            </div>
+            <small class="error-msg" id="phone-error" aria-live="polite"></small>
+          </div>
+
+          <div class="form-group">
+            <div class="field-wrap">
+              <span class="field-icon" aria-hidden="true">&#127891;</span>
+              <select id="track" name="track" required>
+                <option value="" disabled selected hidden></option>
+                <option value="Full-Stack Web Engineering">Full-Stack Web Engineering</option>
+                <option value="Applied AI & LLM Systems">Applied AI &amp; LLM Systems</option>
+                <option value="Frontend & UI Architecture">Frontend &amp; UI Architecture</option>
+              </select>
+              <label for="track">Select Learning Track</label>
+              <span class="status-icon" aria-hidden="true"></span>
+            </div>
+            <small class="error-msg" id="track-error" aria-live="polite"></small>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block" id="submit-btn">
+            <span class="btn-text">Complete Enrollment</span>
+            <span class="btn-spinner" aria-hidden="true"></span>
+          </button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <a href="#top" class="logo">TechSkill<span>Academy</span></a>
+      <p>&copy; 2026 TechSkill Academy. Live interactive engineering education.</p>
     </div>
+  </footer>
 
-    <!-- ==========================================
-         6. FOOTER SECTION & GROUP CREDITS
-    =========================================== -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-top">
-                <div class="footer-brand">
-                    <a href="#overview" class="brand-logo logo-light">
-                        <span class="logo-icon">&lt;/&gt;</span> TechSkill<span class="logo-highlight">Academy</span>
-                    </a>
-                    <p class="footer-tagline">
-                        Official Academic Project Submission for Semester 1 B.Tech Computer Science Web Development Course.
-                    </p>
-                </div>
+  <!-- SUCCESS MODAL -->
+  <div class="modal" id="success-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
+    <div class="modal-backdrop" id="modal-backdrop"></div>
+    <div class="modal-card">
+      <div class="modal-check" aria-hidden="true">&#10003;</div>
+      <h3 id="modal-title">Seat Reserved!</h3>
+      <p id="modal-message"></p>
+      <button type="button" class="btn btn-primary" id="modal-close">Awesome, Got It</button>
+    </div>
+  </div>
 
-                <div class="footer-links">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="#overview">Course Overview</a></li>
-                        <li><a href="#curriculum">Detailed Syllabus</a></li>
-                        <li><a href="#instructor">Instructor Bio</a></li>
-                        <li><a href="#enroll">Student Registration</a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Group 19 Official Credits Box -->
-            <div class="group-credits-box">
-                <div class="credits-header">
-                    <span class="credits-badge">ACADEMIC SUBMISSION</span>
-                    <h3>Group ID: Group 19</h3>
-                    <p><strong>Project Assignment:</strong> Project #47 — Online Course Landing Page</p>
-                </div>
-
-                <div class="members-grid">
-                    <div class="member-card">
-                        <span class="member-role">Developer</span>
-                        <h4 class="member-name">Prince Poddar</h4>
-                        <span class="member-roll">Roll No: 202610101200055</span>
-                    </div>
-
-                    <div class="member-card">
-                        <span class="member-role">Developer</span>
-                        <h4 class="member-name">Manish Kumar</h4>
-                        <span class="member-roll">Roll No: 202610101200056</span>
-                    </div>
-
-                    <div class="member-card">
-                        <span class="member-role">Developer</span>
-                        <h4 class="member-name">Priya Davare</h4>
-                        <span class="member-roll">Roll No: 202610101200057</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="footer-bottom">
-                <p>&copy; 2026 TechSkill Academy | Semester 1 B.Tech CS Group Project #47. Built with HTML5, CSS3 & JS.</p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- External Script File -->
-    <script src="script.js"></script>
+  <script src="./script.js"></script>
 </body>
 </html>
